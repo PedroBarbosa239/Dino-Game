@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Press+Start+2P&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family:'Press Start 2P';
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container_cenario{
+    width: 1100px;
+    height: 500px;
+   border: 2px solid black;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+#container_cenario .dino{
+    position: absolute;
+    width: 150px;
+
+    left: 0;
+    bottom: 0;
+}
+
+#container_cenario .cacto{
+    position: absolute;
+    width: 200px;
+
+    right: -133px;
+    bottom: 0;
+}
+
+#container_start h1{
+    padding: 10px;
+    border: 4px solid black;
+}
+
+#container_start {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 200px;
+
+}
+
+.iniciar{
+    animation: comecou 0.5s ease-in-out ;
+    opacity: 0;
+}
+
+@keyframes comecou {
+    0%{
+        transform: translateY(0px);
+          opacity: 1;
+    }
+
+    100%{
+        transform: translateY(40px);
+        opacity: 0;
+   
+    }
+}
+
+.obstaculo{
+    animation: correr 2s infinite linear ;
+    
+}
+
+@keyframes correr {
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(-1200px);
+   
+    }
+}
+
+.pulo{
+    animation: pular 0.8s ease-in-out ;
+    
+}
+
+@keyframes pular {
+ 
+    40%{
+        transform: translateY(-200px);
+   
+    }
+
+      50%{
+        transform: translateY(-200px);
+   
+    }
+
+     60%{
+        transform: translateY(-200px);
+   
+    }
+
+    70%{
+        transform: translateY(-200px);
+   
+    }
+
+    80%{
+        transform: translateY(-200px);
+   
+    }
+
+
+
+    100%{
+        transform: translateY(0px);
+   
+    }
+}
+
+
+.obstaculo_gamneover{
+    position: absolute;
+    width: 200px;
+
+    right: 830px;
+    bottom: 0;
+}
+#game_over{
+ 
+     font-size: 30px;
+
+}
+
+#botao_reiniciar{
+    width: 80px;
+    margin-top: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#botao_reiniciar:hover{
+    border-color: brown;
+    transition: 0.1;
+}
+
+#container_gameover{
+    opacity: 0;
+    margin-top: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#score{
+    position: absolute;
+    font-size: 24px;
+    padding: 20px;
+}
+
+#name_game{
+    font-size: 24px;
+    position: absolute;
+    padding: 20px 430px;
+
+}
+
+#name_game span{
+    color: brown;
+}
